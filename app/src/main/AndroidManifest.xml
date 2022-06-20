@@ -10,10 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyLedger">
         <activity
-            android:name=".di.activity.ActivityTest"
-            android:exported="false" />
-        <activity
-            android:name=".di.activity.MainActivity"
+            android:name=".ui.activity.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>
