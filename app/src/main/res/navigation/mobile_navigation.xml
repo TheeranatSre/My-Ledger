@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigationHomeFragment">
+
+    <fragment
+        android:id="@+id/navigationHomeFragment"
+        android:name="com.example.myledger.ui.fragment.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/navigationMenuFragment"
+        android:name="com.example.myledger.ui.fragment.menu.MenuFragment"
+        android:label="menu_fragment"
+        tools:layout="@layout/menu_fragment" />
+    <fragment
+        android:id="@+id/navigationReportFragment"
+        android:name="com.example.myledger.ui.fragment.report.ReportFragment"
+        android:label="report_fragment"
+        tools:layout="@layout/report_fragment" />
+    <fragment
+        android:id="@+id/navigationMyAccountFragment"
+        android:name="com.example.myledger.ui.fragment.my_account.MyAccountFragment"
+        android:label="my_account_fragment"
+        tools:layout="@layout/my_account_fragment" />
+
+</navigation>

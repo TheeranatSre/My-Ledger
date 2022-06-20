@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigationHomeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="หน้าหลัก" />
+
+    <item
+        android:id="@+id/navigationMyAccountFragment"
+        android:icon="@drawable/ic_wallet"
+        android:title="บัญชีของฉัน" />
+
+    <item
+        android:id="@+id/navigationReportFragment"
+        android:icon="@drawable/ic_file"
+        android:title="รายงาน" />
+
+    <item
+        android:id="@+id/navigationMenuFragment"
+        android:icon="@drawable/ic_menu"
+        android:title="เมนู" />
+
+</menu>
