@@ -13,4 +13,5 @@
     <color name="light_purple">#BAB2CD</color>
     <color name="text_yellow">#FBC82F</color>
     <color name="light_yellow">#FDE9AB</color>
+    <color name="bg_light_grey">#F2F4F9</color>
 </resources>

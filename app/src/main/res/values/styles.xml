@@ -3,4 +3,8 @@
     <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
         <item name="itemIconSize">24dp</item>
     </style>
+    <style name="text_heading">
+        <item name="android:fontFamily">@font/prompt_medium</item>
+        <item name="android:textSize">18sp</item>
+    </style>
 </resources>

@@ -4,19 +4,114 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg_light_grey"
     tools:context=".ui.fragment.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="50dp"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dashBoardLayout"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:background="@color/light_yellow">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/listsNormalLedgerLayout"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iconNormalLedger"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_hand"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/textListsNormalLedgerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:paddingStart="35dp"
+                    android:text="@string/text_lists_normal_ledger"
+                    android:theme="@style/text_heading"
+                    app:layout_constraintStart_toEndOf="@+id/iconNormalLedger"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/arrowIconTapNormalLedger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:src="@drawable/ic_arrow_down"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <FrameLayout
+                android:id="@+id/listsNormalLedgerFragment"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:background="@color/bg_light_grey"
+                app:layout_constraintTop_toBottomOf="@+id/iconNormalLedger"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="gone"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lintsSaveMoneyLayout"
+                android:layout_width="match_parent"
+                android:padding="16dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iconSaveMoney"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_money"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/textListsSaveMoneyLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:theme="@style/text_heading"
+                    android:paddingStart="35dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/iconSaveMoney"
+                    android:text="@string/text_lists_save_money" />
+
+                <ImageView
+                    android:id="@+id/arrowIconTapSaveMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:src="@drawable/ic_arrow_down"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <FrameLayout
+                android:id="@+id/listsSaveMoneyFragment"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:background="@color/bg_light_grey"
+                app:layout_constraintTop_toBottomOf="@+id/listsNormalLedgerLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

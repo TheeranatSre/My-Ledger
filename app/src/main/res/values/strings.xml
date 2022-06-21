@@ -3,4 +3,9 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <!--    home-->
+    <string name="text_lists_normal_ledger">บัญชีรายรับ-รายจ่าย</string>
+    <string name="text_lists_save_money">บัญชีเงินออม</string>
+
 </resources>
