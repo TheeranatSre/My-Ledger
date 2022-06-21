@@ -4,10 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.myledger.R
 import com.example.myledger.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -15,26 +14,46 @@ class HomeFragment : Fragment() {
     private lateinit var homeViewModel: HomeViewModel
     private var _binding: FragmentHomeBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
+
+    private var isCollapseListsNormalLedgerLayout: Boolean = false
+    private var isCollapseLintsSaveMoneyLayout: Boolean = false
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+        homeViewModel = ViewModelProvider(this)[HomeViewModel::class.java]
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-        return root
+        binding.listsNormalLedgerLayout.setOnClickListener {
+            if (isCollapseListsNormalLedgerLayout) {
+                binding.arrowIconTapNormalLedger.setImageResource(R.drawable.ic_arrow_down)
+                binding.listsNormalLedgerFragment.visibility = View.GONE
+                isCollapseListsNormalLedgerLayout = false
+            } else {
+                binding.arrowIconTapNormalLedger.setImageResource(R.drawable.ic_arrow_up)
+                binding.listsNormalLedgerFragment.visibility = View.VISIBLE
+                isCollapseListsNormalLedgerLayout = true
+            }
+        }
+
+        binding.lintsSaveMoneyLayout.setOnClickListener {
+            if (isCollapseLintsSaveMoneyLayout) {
+                binding.arrowIconTapSaveMoney.setImageResource(R.drawable.ic_arrow_down)
+                binding.listsSaveMoneyFragment.visibility = View.GONE
+                isCollapseLintsSaveMoneyLayout = false
+            } else {
+                binding.arrowIconTapSaveMoney.setImageResource(R.drawable.ic_arrow_up)
+                binding.listsSaveMoneyFragment.visibility = View.VISIBLE
+                isCollapseLintsSaveMoneyLayout = true
+            }
+        }
+
+        return binding.root
     }
 
     override fun onDestroyView() {
