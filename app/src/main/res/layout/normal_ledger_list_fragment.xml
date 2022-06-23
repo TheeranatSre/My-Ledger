@@ -5,9 +5,12 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragment.home.normal_ledger_lists.NormalLedgerListFragment">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/openAddAccountLedger"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_height="50dp"
+        android:text="เพิ่มบัญชี">
+
+    </androidx.appcompat.widget.AppCompatButton>
 
 </FrameLayout>
