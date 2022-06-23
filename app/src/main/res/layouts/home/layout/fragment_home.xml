@@ -64,8 +64,9 @@
             <FrameLayout
                 android:id="@+id/listsNormalLedgerFragment"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
-                android:background="@color/bg_light_grey"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
                 app:layout_constraintTop_toBottomOf="@+id/iconNormalLedger"
                 app:layout_constraintStart_toStartOf="parent"
                 android:visibility="gone"/>
@@ -107,7 +108,9 @@
             <FrameLayout
                 android:id="@+id/listsSaveMoneyFragment"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
                 android:background="@color/bg_light_grey"
                 app:layout_constraintTop_toBottomOf="@+id/listsNormalLedgerLayout"
                 app:layout_constraintStart_toStartOf="parent"
